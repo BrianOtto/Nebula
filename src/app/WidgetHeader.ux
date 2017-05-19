@@ -1,0 +1,44 @@
+<Grid ux:Class="WidgetHeader" Padding="15,15,15,0" Columns="1.3*,1*,1*,1*">
+    <string ux:Property="Page" />
+    <string ux:Property="PageIcon" />
+    <string ux:Property="Filter1" />
+    <string ux:Property="Filter2" />
+    <string ux:Property="Filter3" />
+
+    <StackPanel Dock="Top" Orientation="Horizontal" Padding="0,5,0,5" ItemSpacing="7">
+        <HeaderTextIcon Value="{ReadProperty PageIcon}" Color="Nebula.Color.TextDark" />
+        <HeaderText Value="{ReadProperty Page}" Color="Nebula.Color.TextDark" />
+    </StackPanel>
+
+    <Panel HitTestMode="LocalBounds" Color="Nebula.Color.Filter1">
+        <Grid Columns="2*,8*" Padding="10,0,0,0">
+        	<Rectangle Fill="Nebula.Brush.BackDark" Width="19" Margin="6">
+                <NormalTextIcon Value="10" Color="Nebula.Color.TextLight" Alignment="Center" />
+            </Rectangle>
+
+            <NormalText Value="{ReadProperty Filter1}" Color="Nebula.Color.TextLight" Alignment="Center" />
+        </Grid>
+    </Panel>
+    
+    <Panel HitTestMode="LocalBounds" Color="Nebula.Color.Filter2">
+        <Grid Columns="2*,8*" Padding="10,0,0,0">
+            <Rectangle Fill="Nebula.Brush.BackDark" Width="19" Margin="6">
+                <NormalTextIcon Value="10" Color="Nebula.Color.TextLight" Alignment="Center" />
+            </Rectangle>
+
+            <NormalText Value="{ReadProperty Filter2}" Color="Nebula.Color.TextLight" Alignment="Center" />
+        </Grid>
+    </Panel>
+    
+    <Panel HitTestMode="LocalBounds" Color="Nebula.Color.Filter3">
+        <Grid Columns="2*,8*" Padding="10,0,0,0">
+            <Rectangle Fill="Nebula.Brush.BackDark" Width="19" Margin="6">
+                <NormalTextIcon Value="10" Color="Nebula.Color.TextLight" Alignment="Center" />
+            </Rectangle>
+
+            <NormalText Value="{ReadProperty Filter3}" Color="Nebula.Color.TextLight" Alignment="Center" />
+        </Grid>
+    </Panel>
+
+    <DropShadow />
+</Grid>

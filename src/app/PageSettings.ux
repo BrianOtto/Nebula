@@ -1,0 +1,5 @@
+<Page ux:Class="PageSettings">
+    <Router ux:Dependency="router" />
+    <!-- <JavaScript File="ScriptSettings.js" /> -->
+    <Text>PageSettings</Text>
+</Page>

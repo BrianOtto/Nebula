@@ -1,0 +1,34 @@
+<App>
+	<Panel ux:Class="ButtonNavbar" HitTestMode="LocalBounds" Padding="10" Color="Nebula.Color.BackDark" LineColor="Nebula.Color.TextDark">
+	    <string ux:Property="Icon" />
+	    <string ux:Property="Text" />
+	    <float4 ux:Property="LineColor" />
+
+	    <StackPanel ItemSpacing="5">
+	    	<HeaderTextIconLarge Value="{ReadProperty Icon}" Color="Nebula.Color.TextLight" Alignment="Center" />
+	    	<HeaderText Value="{ReadProperty Text}" Color="Nebula.Color.TextLight" Alignment="Center" />
+	    	<Rectangle Color="{ReadProperty LineColor}" Height="1" />
+	    </StackPanel>
+
+	    <UserEvent ux:Name="clickLineColor" />
+
+	    <OnUserEvent EventName="clickLineColor">
+        	<Set Target="this.LineColor" Value="Nebula.Color.TextLight" />
+    	</OnUserEvent>
+
+	    <OnUserEvent EventName="resetLineColor">
+        	<Set Target="this.LineColor" Value="Nebula.Color.TextDark" />
+    	</OnUserEvent>
+
+	    <Clicked>
+	    	<RaiseUserEvent EventName="resetLineColor" />
+	    	<RaiseUserEvent EventName="clickLineColor" />
+	    </Clicked>
+	</Panel>
+
+	<Panel ux:Class="ButtonIcon" HitTestMode="LocalBounds" Color="Nebula.Color.BackDark">
+	    <string ux:Property="Icon" />
+
+	    <HeaderTextIcon Value="{ReadProperty Icon}" Color="Nebula.Color.TextLight" Alignment="Center" />
+	</Panel>
+</App>

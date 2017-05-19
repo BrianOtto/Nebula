@@ -1,0 +1,37 @@
+<Grid ux:Class="WidgetHeaderSort" Padding="15,15,15,0" Columns="2*,1.9*,2.05*">
+    <string ux:Property="Page" />
+    <string ux:Property="PageIcon" />
+    <string ux:Property="Sort1" />
+    <string ux:Property="Sort2" />
+
+    <StackPanel Dock="Top" Orientation="Horizontal" Padding="0,5,0,5" ItemSpacing="7">
+        <HeaderTextIcon Value="{ReadProperty PageIcon}" Color="Nebula.Color.TextDark" />
+        <HeaderText Value="{ReadProperty Page}" Color="Nebula.Color.TextDark" />
+    </StackPanel>
+
+    <Panel HitTestMode="LocalBounds">
+        <StackPanel Orientation="Horizontal" Padding="8,0,0,0" ItemSpacing="8">
+        	<HeaderTextIcon Value="&#xF0D7;" Color="Nebula.Color.TextDark" Alignment="Center" />
+            <NormalText Value="{ReadProperty Sort1}" Color="Nebula.Color.TextDark" Alignment="CenterLeft" />
+
+            <Rectangle Layer="Background">
+                <Stroke Width="1" Color="Nebula.Color.BackDark" />
+            </Rectangle>
+        </StackPanel>
+    </Panel>
+    
+    <Panel HitTestMode="LocalBounds">
+        <StackPanel Orientation="Horizontal" Padding="8,0,0,0" ItemSpacing="8">
+            <HeaderTextIcon Value="&#xF0D7;" Color="Nebula.Color.TextDark" Alignment="Center" />
+            <NormalText Value="{ReadProperty Sort2}" Color="Nebula.Color.TextDark" Alignment="CenterLeft" />
+
+            <!--
+            <Rectangle Layer="Background">
+                <Stroke Width="1" Color="Nebula.Color.BackDark"/>
+            </Rectangle>
+            -->
+        </StackPanel>
+    </Panel>
+    
+    <DropShadow />
+</Grid>

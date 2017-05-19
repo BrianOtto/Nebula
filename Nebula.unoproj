@@ -1,0 +1,23 @@
+{
+    "Packages": [
+        "Fuse",
+        "FuseJS"
+    ],
+    "Includes": [
+        "src/app/*",
+        "src/lib/nebula/*"
+    ],
+    "BuildDirectory": "bin",
+    "Title": "Nebula",
+    "Description": "",
+    "Copyright": "Copyright © 2017 Brian Otto",
+    "Publisher": "GrokBB, LLC",
+    "RootNamespace": "GrokBB.Nebula",
+    "Mobile": {
+		"Orientations": "Portrait",
+		"RunsInBackground": true
+	},
+	"Android": {
+		"Package": "com.grokbb.nebula"
+	}
+}

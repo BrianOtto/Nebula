@@ -1,0 +1,6 @@
+/bin/Local
+/bin/Android/Release/*
+!/bin/Android/Release/Nebula.apk
+/*.sublime-workspace
+/*.sublime-project
+/.uno

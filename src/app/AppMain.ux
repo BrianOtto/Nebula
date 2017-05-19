@@ -1,0 +1,43 @@
+<App>
+	<JavaScript>
+		module.exports = {
+	    	clickMyFeed: function() {
+	        	router.goto('myfeed');
+	        },
+
+	        clickChannels: function() {
+	        	router.goto('channels');
+	        },
+
+	        clickContacts: function() {
+	        	router.goto('contacts');
+	        },
+
+	        clickSettings: function() {
+	        	router.goto('settings');	        	
+	        },
+	    };
+	</JavaScript>
+
+	<Router ux:Name="router" />
+
+	<DockPanel>
+	    <Navigator DefaultPath="myfeed">
+	        <PageMyFeed ux:Template="myfeed" router="router" />
+	        <PageChannels ux:Template="channels" router="router" />
+	        <PageContacts ux:Template="contacts" router="router" />
+	        <PageSettings ux:Template="settings" router="router" />
+	    </Navigator>
+
+	    <WidgetSearch Dock="Top" />
+
+	    <Grid Dock="Bottom" Columns="1*,1*,1*,1*">
+	    	<UserEvent ux:Name="resetLineColor" />
+
+	        <ButtonNavbar Icon="&#xF0EC;" Text="My Feed" Clicked="{clickMyFeed}" LineColor="Nebula.Color.TextLight" />
+	        <ButtonNavbar Icon="&#xF086;" Text="Channels" Clicked="{clickChannels}" />
+	        <ButtonNavbar Icon="&#xF2BB;" Text="Contacts" Clicked="{clickContacts}" />
+	        <ButtonNavbar Icon="&#xF013;" Text="Settings" Clicked="{clickSettings}" />
+	    </Grid>
+	</DockPanel>
+</App>

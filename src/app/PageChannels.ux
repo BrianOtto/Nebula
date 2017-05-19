@@ -1,0 +1,22 @@
+<Page ux:Class="PageChannels">
+    <Router ux:Dependency="router" />
+    
+    <DockPanel>
+    	<WidgetHeaderSort Dock="Top" Page="Channels" PageIcon="&#xF086;" Sort1="Sort by Name" Sort2="Sort By Newest" />
+	    
+	    <ScrollView Padding="15,20,15,0">
+	    	<Grid CellSpacing="15">
+		    	<WidgetChannel />
+		    	<WidgetChannel />
+		    	<WidgetChannel />
+		    	<WidgetChannel />
+		    	<WidgetChannel />
+		    	<WidgetChannel />
+		    	<WidgetChannel />
+		    	<WidgetChannel />
+		    	<WidgetChannel />
+		    	<WidgetChannel />
+			</Grid>
+	    </ScrollView>
+	</DockPanel>
+</Page>

@@ -1,0 +1,36 @@
+<StackPanel ux:Class="WidgetCard" Height="133" BarColor="Nebula.Color.BackDark">
+	<float4 ux:Property="BarColor" />
+
+	<StackPanel>
+		<Rectangle Height="8" Color="{ReadProperty BarColor}" Margin="1,1,1,0" />
+		
+		<Grid Columns="1*,1*" Margin="8,8,8,8">
+			<NormalTextBold Value="#nebula" />
+			<NormalText Value="Tue, 01/24/2017 at 03:00pm" TextAlignment="Right" />
+		</Grid>
+
+		<Grid Columns="77,1*" Margin="8,0,8,0">
+			<StackPanel Width="65" Alignment="Left" ItemSpacing="2">
+				<Image File="../lib/nebula/images/avatar.png" Height="65" Width="65" Alignment="TopLeft" StretchMode="UniformToFill">
+					<Rectangle Layer="Background">
+						<Stroke Width="1" Color="Nebula.Color.TextDark" />
+						
+						<Rectangle Layer="Background" Margin="1">
+							<Stroke Width="3" Color="Nebula.Color.TextLight" />
+						</Rectangle>
+					</Rectangle>
+				</Image>
+
+				<NormalText Value="Test User" TextAlignment="Center" />
+			</StackPanel>
+
+			<NormalTextView Value="Lorem ipsum dolor sit amet, consec tetur adipi scing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum." Width="100%" Height="60" Alignment="TopRight" TextWrapping="Wrap" IsReadOnly="true" />
+		</Grid>
+
+		<NormalText Value="20 New Replies" TextAlignment="Right" Margin="8,-8,8,8" />
+
+	    <Rectangle Layer="Background">
+	        <Stroke Width="1" Color="Nebula.Color.TextDark" />
+	    </Rectangle>
+	</StackPanel>
+</StackPanel>
