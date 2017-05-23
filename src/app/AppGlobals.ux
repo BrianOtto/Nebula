@@ -10,6 +10,7 @@
 	<TextInput ux:Class="NormalTextInput" Font="Nebula.Font.Regular" Padding="10,5,10,5" />
 	<Text ux:Class="HeaderText" Font="Nebula.Font.Regular" FontSize="15" />
 	<Text ux:Class="HeaderTextIcon" Font="Nebula.Font.FontAwesome" FontSize="19" />
+	<Text ux:Class="HeaderTextIconSmall" Font="Nebula.Font.FontAwesome" FontSize="17" />
 	<Text ux:Class="HeaderTextIconLarge" Font="Nebula.Font.FontAwesome" FontSize="21" />
 
 	<SolidColor ux:Global="Nebula.Brush.BackDark" Color="#444444" />

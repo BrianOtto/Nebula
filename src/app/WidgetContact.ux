@@ -1,0 +1,50 @@
+<StackPanel ux:Class="WidgetContact" BarColor="Nebula.Color.BackDark">
+	<float4 ux:Property="BarColor" />
+	
+	<StackPanel>
+		<Rectangle Height="8" Color="{ReadProperty BarColor}" Margin="1,1,1,0" />
+
+		<Grid Columns="77,1*" Margin="8">
+			<StackPanel Width="65" Alignment="Left" ItemSpacing="2">
+				<Image File="../lib/nebula/images/avatar.png" Height="65" Width="65" Alignment="TopLeft" StretchMode="UniformToFill">
+					<Rectangle Layer="Background">
+						<Stroke Width="1" Color="Nebula.Color.TextDark" />
+						
+						<Rectangle Layer="Background" Margin="1">
+							<Stroke Width="3" Color="Nebula.Color.TextLight" />
+						</Rectangle>
+					</Rectangle>
+				</Image>
+
+				<NormalText Value="Test User" TextAlignment="Center" />
+			</StackPanel>
+
+			<StackPanel ItemSpacing="4">
+				<StackPanel Orientation="Horizontal" Alignment="TopRight" ItemSpacing="8">
+					<StackPanel Orientation="Horizontal" Alignment="CenterRight" ItemSpacing="4">
+						<NormalText Value="13" />
+						<NormalTextBold Value="Threads |" />
+						<NormalText Value="312" />
+						<NormalTextBold Value="Replies" />
+					</StackPanel>
+
+					<HeaderTextIcon Value="&#xF05E;" Alignment="CenterRight" />
+				</StackPanel>
+
+				<StackPanel ItemSpacing="4" Margin="0,8,0,0">
+					<NormalTextBold Value="Top 3 Active Channels" Alignment="Left" />
+					<NormalText Value="#nebula, #seattle, #cooking" Alignment="Left" />
+
+					<StackPanel Orientation="Horizontal" ItemSpacing="8" Alignment="Right" Margin="0,8,0,0">
+						<NormalTextBold Value="Send Private Message" Alignment="Center" />
+						<HeaderTextIconSmall Value="&#xF0E0;" Alignment="Center" />
+					</StackPanel>
+				</StackPanel>
+			</StackPanel>
+		</Grid>
+	</StackPanel>
+
+	<Rectangle Layer="Background">
+        <Stroke Width="1" Color="Nebula.Color.TextDark" />
+    </Rectangle>
+</StackPanel>
