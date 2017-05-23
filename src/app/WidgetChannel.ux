@@ -3,7 +3,7 @@
 		<Grid Columns="1*,1*">
 			<NormalText Value="#nebula" Alignment="CenterLeft" Color="Nebula.Color.TextHighlight" />
 
-			<StackPanel Orientation="Horizontal" Alignment="Right" ItemSpacing="8">
+			<StackPanel Orientation="Horizontal" Alignment="TopRight" ItemSpacing="8">
 				<StackPanel Orientation="Horizontal" Alignment="CenterRight" ItemSpacing="4">
 					<NormalText Value="13" />
 					<NormalTextBold Value="Threads |" />

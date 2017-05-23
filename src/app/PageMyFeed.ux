@@ -5,7 +5,7 @@
     	<WidgetHeader Dock="Top" Page="My Feed" PageIcon="&#xF0EC;" Filter1="Thread" Filter2="Mention" Filter3="Group" Columns="1.3*,0.92*,1*,0.88*" />
 	    
 	    <ScrollView Padding="15,20,15,0">
-    		<Grid CellSpacing="20">
+    		<Grid CellSpacing="15">
 		    	<WidgetCard BarColor="Nebula.Color.Filter1" />
 		    	<WidgetCard BarColor="Nebula.Color.Filter1" />
 		    	<WidgetCard BarColor="Nebula.Color.Filter2" />

@@ -1,4 +1,4 @@
-<StackPanel ux:Class="WidgetCard" Height="133" BarColor="Nebula.Color.BackDark">
+<StackPanel ux:Class="WidgetCard" BarColor="Nebula.Color.BackDark">
 	<float4 ux:Property="BarColor" />
 
 	<StackPanel>
@@ -24,10 +24,10 @@
 				<NormalText Value="Test User" TextAlignment="Center" />
 			</StackPanel>
 
-			<NormalTextView Value="Lorem ipsum dolor sit amet, consec tetur adipi scing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum." Width="100%" Height="60" Alignment="TopRight" TextWrapping="Wrap" IsReadOnly="true" />
+			<NormalTextView Value="Lorem ipsum dolor sit amet, consec tetur adipi scing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum." Width="100%" Height="65" Alignment="TopRight" TextWrapping="Wrap" IsReadOnly="true" />
 		</Grid>
 
-		<NormalText Value="20 New Replies" TextAlignment="Right" Margin="8,-8,8,8" />
+		<NormalText Value="20 New Replies" TextAlignment="Right" Margin="8,-12,8,8" />
 
 	    <Rectangle Layer="Background">
 	        <Stroke Width="1" Color="Nebula.Color.TextDark" />
