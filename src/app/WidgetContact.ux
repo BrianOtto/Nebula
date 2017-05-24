@@ -36,8 +36,10 @@
 					<NormalText Value="#nebula, #seattle, #cooking" Alignment="Left" />
 
 					<StackPanel Orientation="Horizontal" ItemSpacing="8" Alignment="Right" Margin="0,8,0,0">
-						<NormalTextBold Value="Send Private Message" Alignment="Center" />
+						<HeaderTextIconSmall Value="&#xF06E;" Alignment="Center" />
+						<NormalTextBold Value="View Threads" Alignment="Center" />
 						<HeaderTextIconSmall Value="&#xF0E0;" Alignment="Center" />
+						<NormalTextBold Value="Send Message" Alignment="Center" />
 					</StackPanel>
 				</StackPanel>
 			</StackPanel>

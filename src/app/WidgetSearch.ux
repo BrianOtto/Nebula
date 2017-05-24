@@ -1,11 +1,10 @@
 <Grid ux:Class="WidgetSearch" Columns="8*,1*,1*" Color="Nebula.Color.BackDark" Padding="15">
-    <NormalTextInput ux:Name="search" TextColor="Nebula.Color.TextLight" CaretColor="Nebula.Color.TextLight" Height="35" Margin="0,0,5,0">
+    <NormalTextInput ux:Name="search" TextColor="Nebula.Color.TextLight" CaretColor="Nebula.Color.TextLight" PlaceholderText="Global Search" PlaceholderColor="Nebula.Color.TextLight" Height="35">
         <Rectangle Layer="Background">
             <Stroke Width="1" Color="Nebula.Color.BackLight" />
         </Rectangle>
     </NormalTextInput>
 
-    <ButtonIcon Icon="&#xF002;" />
-    <!-- <ButtonIcon Icon="&#xF0D7;" /> -->
-    <ButtonIcon Icon="&#xF187;" />
+    <ButtonIcon Icon="&#xF0E0;" Alignment="Right" />
+    <ButtonIcon Icon="&#xF187;" Alignment="Right" />
 </Grid>
