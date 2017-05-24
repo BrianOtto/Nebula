@@ -1,0 +1,29 @@
+<StackPanel ux:Class="WidgetServer">
+	<string ux:Property="Domain" />
+	<string ux:Property="Status" />
+	<string ux:Property="LastOnline" />
+
+	<StackPanel Padding="8" ItemSpacing="6">
+		<Grid Columns="1*,1*">
+			<NormalText Value="{ReadProperty Domain}" Alignment="CenterLeft" Color="Nebula.Color.TextHighlight" />
+
+			<StackPanel Orientation="Horizontal" Alignment="TopRight" ItemSpacing="8">
+				<StackPanel Orientation="Horizontal" Alignment="CenterRight" ItemSpacing="4">
+					<NormalTextBold Value="Status:" />
+					<NormalText Value="{ReadProperty Status}" />
+				</StackPanel>
+
+				<HeaderTextIcon Value="&#xF05E;" Alignment="CenterRight" />
+			</StackPanel>
+		</Grid>
+
+		<StackPanel Orientation="Horizontal" Alignment="BottomLeft" ItemSpacing="4">
+			<NormalTextBold Value="Last Online:" />
+			<NormalText Value="{ReadProperty LastOnline}" />
+		</StackPanel>
+
+		<Rectangle Layer="Background">
+	        <Stroke Width="1" Color="Nebula.Color.TextDark" />
+	    </Rectangle>
+	</StackPanel>
+</StackPanel>

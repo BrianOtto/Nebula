@@ -1,5 +1,74 @@
 <Page ux:Class="PageSettings">
     <Router ux:Dependency="router" />
-    <!-- <JavaScript File="ScriptSettings.js" /> -->
-    <Text>PageSettings</Text>
+    
+    <DockPanel>
+        <StackPanel Dock="Top" Orientation="Horizontal" Padding="15,20,15,0" ItemSpacing="7">
+            <HeaderTextIcon Value="&#xF013;" Color="Nebula.Color.TextDark" />
+            <HeaderText Value="Settings" Color="Nebula.Color.TextDark" />
+        </StackPanel>
+        
+        <ScrollView Padding="15,20,15,0">
+            <StackPanel ItemSpacing="20">
+                <StackPanel Orientation="Horizontal" Alignment="TopCenter" ItemSpacing="15">
+                    <Image File="../lib/nebula/images/avatar-large.png" Height="130" Width="130" Alignment="TopLeft" StretchMode="UniformToFill">
+                        <Rectangle Layer="Background">
+                            <Stroke Width="1" Color="Nebula.Color.TextDark" />
+                            
+                            <Rectangle Layer="Background" Margin="1">
+                                <Stroke Width="3" Color="Nebula.Color.TextLight" />
+                            </Rectangle>
+                        </Rectangle>
+                    </Image>
+
+                    <StackPanel ItemSpacing="7">
+                        <HeaderText Value="Test User" Color="Nebula.Color.TextHighlight" />
+
+                        <StackPanel Orientation="Horizontal" ItemSpacing="4">
+                            <StackPanel Padding="0,0,0,4">
+                                <NormalText Value="15" Alignment="Right" />
+                                <NormalText Value="123" Alignment="Right" />
+                                <NormalText Value="42" Alignment="Right" />
+                            </StackPanel>
+
+                            <StackPanel>
+                                <NormalTextBold Value="Threads" Alignment="Left" />
+                                <NormalTextBold Value="Replies" Alignment="Left" />
+                                <NormalTextBold Value="Messages" Alignment="Left" />
+                            </StackPanel>
+                        </StackPanel>
+
+                        <StackPanel ItemSpacing="2">
+                            <StackPanel Orientation="Horizontal" ItemSpacing="8">
+                                <HeaderTextIconSmall Value="&#xF06E;" Alignment="Center" />
+                                <NormalTextBold Value="View Your Threads" Alignment="Center" />
+                            </StackPanel>
+
+                            <StackPanel Orientation="Horizontal" ItemSpacing="8">
+                                <HeaderTextIconSmall Value="&#xF0E0;" Alignment="Center" />
+                                <NormalTextBold Value="View Your Messages" Alignment="Center" />
+                            </StackPanel>
+                        </StackPanel>
+                    </StackPanel>
+                </StackPanel>
+
+                <NormalTextView Value="Lorem ipsum dolor sit amet, consec tetur adipi scing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est. Testtttttttt" MaxHeight="110" TextWrapping="Wrap" />
+
+                <StackPanel>
+                    <Grid Columns="1*,1*" Margin="0,0,0,15">
+                        <HeaderText Value="Public Servers" Color="Nebula.Color.TextDark" />
+
+                        <StackPanel Orientation="Horizontal" ItemSpacing="8" Alignment="Right">
+                            <HeaderTextIcon Value="&#xF0FE;" Alignment="Center" />
+                            <NormalTextBold Value="Add Server" Alignment="Center" />
+                        </StackPanel>
+                    </Grid>
+
+                    <StackPanel ItemSpacing="15">
+                        <WidgetServer Domain="ssb.exitsystemcall.com" Status="Online" LastOnline="Now" />
+                        <WidgetServer Domain="ssb.rootsystems.nz" Status="Offline" LastOnline="Sun, 05/21/2017 at 10:00pm" />
+                    </StackPanel>
+                </StackPanel>
+            </StackPanel>
+        </ScrollView>
+	</DockPanel>
 </Page>
