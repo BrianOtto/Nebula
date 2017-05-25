@@ -2,6 +2,7 @@
 	<Font ux:Global="Nebula.Font.FontAwesome" File="../lib/nebula/fonts/FontAwesome.ttf" />
 	<Font ux:Global="Nebula.Font.Regular" File="../lib/nebula/fonts/OpenSans-Regular.ttf" />
 	<Font ux:Global="Nebula.Font.Bold" File="../lib/nebula/fonts/OpenSans-Bold.ttf" />
+	<Font ux:Global="Nebula.Font.Title" File="../lib/nebula/fonts/Raleway-Bold.ttf" />
 
 	<Text ux:Class="NormalText" Font="Nebula.Font.Regular" FontSize="11" />
 	<Text ux:Class="NormalTextBold" Font="Nebula.Font.Bold" FontSize="11" />

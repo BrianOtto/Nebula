@@ -25,8 +25,33 @@ LICENSE for Libraries
         --- 
 
 =========================
+LICENSE for Images
+=========================
+
+Solar System
+-------------------------
+Designed by Oliviu Stoian
+https://thenounproject.com/smashicons/
+
+Licensed under the Creative Commons By 3.0
+https://creativecommons.org/licenses/by/3.0/
+
+src/lib/nebula/images/icon.png
+Note: I changed the color from Black to White
+
+=========================
 LICENSE for Fonts
 =========================
+
+Font Awesome
+-------------------------
+Designed by Dave Gandy
+http://fontawesome.io
+
+Licensed under the SIL OFL 1.1
+http://scripts.sil.org/OFL
+
+src/lib/nebula/fonts/FontAwesome.ttf
 
 Open Sans
 -------------------------
@@ -39,12 +64,18 @@ http://www.apache.org/licenses/LICENSE-2.0
 src/lib/nebula/fonts/OpenSans-Bold.ttf
 src/lib/nebula/fonts/OpenSans-Regular.ttf
 
-Font Awesome
+Raleway
 -------------------------
-Designed by Dave Gandy
-http://fontawesome.io
+Designed by Matt McInerney
+matt@pixelspread.com
+
+Designed by Pablo Impallari
+http://www.impallari.com
+
+Designed by Rodrigo Fuenzalida
+http://www.rfuenzalida.com
 
 Licensed under the SIL OFL 1.1
 http://scripts.sil.org/OFL
 
-src/lib/nebula/fonts/FontAwesome.ttf
+src/lib/nebula/fonts/Raleway-Bold.ttf

@@ -8,6 +8,7 @@
         "src/lib/nebula/*"
     ],
     "BuildDirectory": "bin",
+    "Icon": "src/lib/nebula/images/icon.png",
     "Title": "Nebula",
     "Description": "",
     "Copyright": "Copyright © 2017 Brian Otto",
