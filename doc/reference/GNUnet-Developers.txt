@@ -1,0 +1,69 @@
+The entire discussion thread can be found at
+https://lists.gnu.org/archive/html/gnunet-developers/2015-08/msg00016.html
+
+Re: [GNUnet-developers] key exchanges [updated, resend]
+From: Christian Grothoff
+Subject: Re: [GNUnet-developers] key exchanges [updated, resend]
+Date: Thu, 20 Aug 2015 01:30:14 +0200
+
+Hi Dominic,
+
+I'm putting gnunet-developers in CC, as this is really where this ought
+to be discussed. (The first e-mail somehow didn't go through, so I'm
+trying again and added a few clarifications.)
+
+You certainly wrote an interesting paper with many good points. I
+especially like that the last variant of your protocol offers a version
+switch without introducing a distinguisher into the wire protocol. What
+I'm not convinced about is mostly that you do go back to using
+signatures to avoid the "wildcard".  Signatures leave persistent
+evidence: Alice did want to talk to Bob.  Bob can prove this to third
+parties if he has Alice's signature. So this is no longer "off the
+record", at least as far as the meta data goes. In return, you defeat
+the "wildcard" attack, but the fact that Bob is really screwed if his
+private key is "lost" sounds only "fair" to me -- Bob was compromised
+after all.  OTOH, with your scheme, Bob can prove something about Alice,
+which feels worse.
+
+Maybe we can fix this by making Alice not sign with her own key, but a
+derived key.  For example, Bob could choose a factor x and send G'=xG in
+the 2nd step (together with the server's ephemeral key, already boxed in
+the ECDHE-box of the two ephermerals). Then, Alice would derive a new
+key A' = aG' (via point multiplication of her long-term private key) and
+could sign with a/A' against generator G' (instead of the usual
+generator G). I should write down the math and check it more (need a
+piece of paper and more time...), but my intuition (for ECDSA) is that
+Bob could use his knowledge of 'x' to forge such a signature (using A as
+the generator and x as the private key), so the signature is worthless
+for third parties and the conversation stays metadata-OTR: Bob cannot
+prove to a 3rd party that he ever talked with Alice, and we maintain
+Dominic's property that even if Bob's long-term private key is
+compromised, he could be sure that at this time, he was talking with
+Alice (so no wildcard).
+
+With respect to adopting anything like this for GNUnet, there is a bit
+of an architectural issue that we'd have to solve first: right now, the
+client (Alice) self-identifies to the server (Bob) in the clear on the
+transport-layer long before the KX happens.  This is used to allow the
+server to refuse the connection (before self-identifying as "Bob").
+Compared to your handshake, it has the disadvantage that Alice reveals
+her identity "in the clear" to the network (unless the HTTPS-transport
+is used, in which case we should get your semantics with many more
+round-trips).
+
+The fact that GNUnet's existing transports are "below" the KX-crypto
+means that they do leak a bit more information (such as Alice's peer
+identity, cryptobox-boundaries, etc) than strictly desirable, which is
+one of those "long-term" problems that has been in the back of my mind
+for a while. The architectural reason for this was/is to keep the very
+high complexity of dealing with many protocols separate from the process
+that deals with the "sensitive" cryptography / key material.
+
+So please disregard my comments from the camp that this would just
+require changes to the KX logic in core, this would be a bigger change
+to get the desired semantics.  I'm not against this happening (modulo
+the signature vs. wildcard issue), but it is not the small change I
+initially imagined.
+
+Happy hacking!
+Christian
