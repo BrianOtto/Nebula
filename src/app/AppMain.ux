@@ -1,4 +1,7 @@
 <App>
+	<ux:Include File="AppGlobals.ux" />
+	<ux:Include File="AppButtons.ux" />
+
 	<JavaScript>
 		module.exports = {
 	    	clickMyFeed: function() {

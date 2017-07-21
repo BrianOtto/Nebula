@@ -1,4 +1,4 @@
-<App>
+<Panel>
 	<Panel ux:Class="ButtonNavbar" HitTestMode="LocalBounds" Padding="10" Color="Nebula.Color.BackDark" LineColor="Nebula.Color.TextDark">
 	    <string ux:Property="Icon" />
 	    <string ux:Property="Text" />
@@ -31,4 +31,4 @@
 
 	    <HeaderTextIcon Value="{ReadProperty Icon}" Color="Nebula.Color.TextLight" Alignment="Center" />
 	</Panel>
-</App>
+</Panel>

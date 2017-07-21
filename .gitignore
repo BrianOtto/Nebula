@@ -1,4 +1,5 @@
 /bin/Local
+/bin/Android/Preview/*
 /bin/Android/Release/*
 !/bin/Android/Release/Nebula.apk
 /*.sublime-workspace

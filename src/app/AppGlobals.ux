@@ -1,4 +1,4 @@
-<App>
+<Panel>
 	<Font ux:Global="Nebula.Font.FontAwesome" File="../lib/nebula/fonts/FontAwesome.ttf" />
 	<Font ux:Global="Nebula.Font.Regular" File="../lib/nebula/fonts/OpenSans-Regular.ttf" />
 	<Font ux:Global="Nebula.Font.Bold" File="../lib/nebula/fonts/OpenSans-Bold.ttf" />
@@ -26,4 +26,4 @@
 	<float4 ux:Global="Nebula.Color.Filter1" ux:Value="#E09079" />
 	<float4 ux:Global="Nebula.Color.Filter2" ux:Value="#50788E" />
 	<float4 ux:Global="Nebula.Color.Filter3" ux:Value="#559E77" />
-</App>
+</Panel>
