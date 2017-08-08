@@ -1,11 +1,14 @@
 {
     "Packages": [
         "Fuse",
-        "FuseJS"
+        "FuseJS",
+        "Uno.Net.Sockets"
     ],
     "Includes": [
         "src/app/*",
-        "src/lib/nebula/*"
+        "src/lib/nebula/**.uno",
+        "src/lib/nebula/**.js:Bundle",
+        "src/lib/sodium-0.5.2/**.js:Bundle"
     ],
     "BuildDirectory": "bin",
     "Icon": "src/lib/nebula/images/icon.png",

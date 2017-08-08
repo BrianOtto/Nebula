@@ -22,7 +22,25 @@ PERFORMANCE OF THIS SOFTWARE.
 LICENSE for Libraries
 =========================
 
-        --- 
+Sodium (libsodium.js)
+-------------------------
+Ahmad Ben Mrad and Frank Denis
+https://github.com/jedisct1/libsodium.js
+
+Licensed under the ISC License
+https://opensource.org/licenses/ISC
+
+src/lib/sodium-0.5.2
+
+Buffer (a few functions)
+-------------------------
+Feross Aboukhadijeh
+https://github.com/feross/buffer
+
+Licensed under the MIT License
+https://opensource.org/licenses/MIT
+
+src/lib/nebula/Common.js (utf8ToBytes)
 
 =========================
 LICENSE for Images

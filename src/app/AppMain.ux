@@ -3,6 +3,13 @@
 	<ux:Include File="AppButtons.ux" />
 
 	<JavaScript>
+		var client = require('../lib/nebula/Client.js');
+
+		// An invite code for a pub server. You can get a new one from http://ssb.exitsystemcall.com/invited
+		var invite = 'ssb.exitsystemcall.com:8008:@gSb2Dt4qtUSIt0jV1yrugKPiBriKPIUFfYB574vWhrM=.ed25519~H7CnTrQ2thtMwxUWsfWb1OL/qQ4gfNiI09pJbOAx9+4=';
+
+		client.connect(invite);
+
 		module.exports = {
 	    	clickMyFeed: function() {
 	        	router.goto('myfeed');
