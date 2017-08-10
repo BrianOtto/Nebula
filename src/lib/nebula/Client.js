@@ -86,6 +86,7 @@ var connect = function (invite) {
     keychain.server.publicKey = sodium.from_base64(serverKeys[0].replace('.ed25519', '').substr(1));
 
     console.log('My Public Key', sodium.to_base64(keychain.client.publicKey));
+    console.log('Connecting To ...', serverHost, serverPort);
 
     socket.connect(serverHost, serverPort);
 }

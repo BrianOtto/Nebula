@@ -2,6 +2,7 @@ using Fuse.Scripting;
 using Uno;
 using Uno.Collections;
 using Uno.UX;
+using Uno.Net;
 using Uno.Net.Sockets;
 using Uno.Text;
 using Uno.Threading;
@@ -27,11 +28,11 @@ public class NebulaSocket : NativeEventEmitterModule {
         socket = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);
         socketAvailable = true;
 
-        var address = args[0] as string;
+        var address = Dns.GetHostAddresses(args[0] as string)[0];
         var port = int.Parse(args[1] as string);
         
         try {
-            socket.Connect(address, port);
+            socket.Connect(new IPEndPoint(address, port));
 
             Emit("onConnect");
             
