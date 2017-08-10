@@ -252,11 +252,11 @@ client.on('data', function(data) {
         
         if (encryptedAccept) {
             client.write(new Buffer(encryptedAccept));
-    	    
-    	    verifyChallenge = true;
-    	} else {
-    	    client.destroy();
-    	}
+            
+            verifyChallenge = true;
+        } else {
+            client.destroy();
+        }
     } else if (verifyAccept === false) {
         // The server has sent an "accept" to the client, and we need to verify it
         

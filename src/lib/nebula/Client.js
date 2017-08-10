@@ -72,26 +72,26 @@ var parsedServerData = false
 var randomStream = {}
 
 var connect = function (invite) {
-	var invitePieces = invite.split(':');
+    var invitePieces = invite.split(':');
 
-	serverHost = invitePieces[0];
-	serverPort = invitePieces[1];
+    serverHost = invitePieces[0];
+    serverPort = invitePieces[1];
 
-	// e.g. The server's public key is gSb2Dt4qtUSIt0jV1yrugKPiBriKPIUFfYB574vWhrM=
-	// e.g. Your unique invite code is H7CnTrQ2thtMwxUWsfWb1OL/qQ4gfNiI09pJbOAx9+4=
-	// NOTE: I don't understand what the unique invite code is used for.
-	//       The server does not request or verify it in any way.
-	var serverKeys = invitePieces[2].split('~');
+    // e.g. The server's public key is gSb2Dt4qtUSIt0jV1yrugKPiBriKPIUFfYB574vWhrM=
+    // e.g. Your unique invite code is H7CnTrQ2thtMwxUWsfWb1OL/qQ4gfNiI09pJbOAx9+4=
+    // NOTE: I don't understand what the unique invite code is used for.
+    //       The server does not request or verify it in any way.
+    var serverKeys = invitePieces[2].split('~');
 
-	keychain.server.publicKey = sodium.from_base64(serverKeys[0].replace('.ed25519', '').substr(1));
+    keychain.server.publicKey = sodium.from_base64(serverKeys[0].replace('.ed25519', '').substr(1));
 
-	console.log('My Public Key', sodium.to_base64(keychain.client.publicKey));
+    console.log('My Public Key', sodium.to_base64(keychain.client.publicKey));
 
-	socket.connect(serverHost, serverPort);
+    socket.connect(serverHost, serverPort);
 }
 
 socket.on("onConnect", function() {
-	// The client creates a "challenge" for the server
+    // The client creates a "challenge" for the server
     // i.e. The client wants to securely transmit a temporary public key to the server
     
     console.log('Create Challenge');
@@ -115,13 +115,13 @@ socket.on("onConnect", function() {
 })
 
 socket.on("onDisconnect", function() {
-	console.log('onDisconnect');
+    console.log('onDisconnect');
 })
 
 socket.on("onReceive", function(data) {
-	data = new Uint8Array(data);
-	
-	if (verifyChallenge === false) {
+    data = new Uint8Array(data);
+    
+    if (verifyChallenge === false) {
         // The server has sent a "challenge" to the client, and we need to verify it
         
         console.log('Verify Challenge');
@@ -179,13 +179,13 @@ socket.on("onReceive", function(data) {
         var encryptedAccept = sodium.crypto_secretbox_easy(keychain.accept, new Uint8Array(24).fill(0), keychain.shared.secretForSendingHash);
         
         if (encryptedAccept) {
-        	// The Array.from is needed so that Uno can convert the data back to bytes[]
+            // The Array.from is needed so that Uno can convert the data back to bytes[]
             socket.send(Array.from(encryptedAccept));
-    	    
-    	    verifyChallenge = true;
-    	} else {
-    	    socket.disconnect();
-    	}
+            
+            verifyChallenge = true;
+        } else {
+            socket.disconnect();
+        }
     } else if (verifyAccept === false) {
         // The server has sent an "accept" to the client, and we need to verify it
         
@@ -241,10 +241,10 @@ socket.on("onReceive", function(data) {
                 console.log('');
             }
         } else {
-        	socket.disconnect();
+            socket.disconnect();
         }
     } else {
-    	// The client appends the latest data
+        // The client appends the latest data
         serverData = common.concat(serverData, new Uint8Array(data));
         
         // The previous timer is cleared
@@ -261,13 +261,13 @@ socket.on("onReceive", function(data) {
 })
 
 socket.on("onError", function(message) {
-	console.log('onError', message);
+    console.log('onError', message);
 })
 
 // This function assumes all of the data has been downloaded
 // It will not parse in real-time, as a stream is being sent
 function parseServerData() {
-	clearTimeout(serverDataTimer)
+    clearTimeout(serverDataTimer)
     console.log('\nParsing Server Data ...\n')
     
     // We create a nonce (i.e. a one-time use number) from the temporary MAC

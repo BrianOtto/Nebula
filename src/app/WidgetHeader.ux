@@ -12,7 +12,7 @@
 
     <Panel HitTestMode="LocalBounds" Color="Nebula.Color.Filter1">
         <Grid Columns="2*,8*" Padding="10,0,0,0">
-        	<Rectangle Fill="Nebula.Brush.BackDark" Width="19" Margin="6">
+            <Rectangle Fill="Nebula.Brush.BackDark" Width="19" Margin="6">
                 <NormalTextIcon Value="10" Color="Nebula.Color.TextLight" Alignment="Center" />
             </Rectangle>
 

@@ -2,15 +2,15 @@
     <Router ux:Dependency="router" />
     
     <DockPanel>
-    	<WidgetHeader Dock="Top" Page="Contacts" PageIcon="&#xF2BB;" Filter1="Friend" Filter2="Follower" Filter3="Starred" Columns="1.3*,0.85*,1*,0.95*" />
-	    
-	    <ScrollView Padding="15,20,15,0">
-    		<Grid CellSpacing="15">
-    			<WidgetContact BarColor="Nebula.Color.Filter1" />
-    			<WidgetContact BarColor="Nebula.Color.Filter1" />
-    			<WidgetContact BarColor="Nebula.Color.Filter2" />
-    			<WidgetContact BarColor="Nebula.Color.Filter3" />
-    		</Grid>
-	    </ScrollView>
-	</DockPanel>
+        <WidgetHeader Dock="Top" Page="Contacts" PageIcon="&#xF2BB;" Filter1="Friend" Filter2="Follower" Filter3="Starred" Columns="1.3*,0.85*,1*,0.95*" />
+        
+        <ScrollView Padding="15,20,15,0">
+            <Grid CellSpacing="15">
+                <WidgetContact BarColor="Nebula.Color.Filter1" />
+                <WidgetContact BarColor="Nebula.Color.Filter1" />
+                <WidgetContact BarColor="Nebula.Color.Filter2" />
+                <WidgetContact BarColor="Nebula.Color.Filter3" />
+            </Grid>
+        </ScrollView>
+    </DockPanel>
 </Page>

@@ -11,7 +11,7 @@
 
     <Panel HitTestMode="LocalBounds">
         <StackPanel Orientation="Horizontal" Padding="8,0,0,0" ItemSpacing="8">
-        	<HeaderTextIcon Value="&#xF0D7;" Color="Nebula.Color.TextDark" Alignment="Center" />
+            <HeaderTextIcon Value="&#xF0D7;" Color="Nebula.Color.TextDark" Alignment="Center" />
             <NormalText Value="{ReadProperty Sort1}" Color="Nebula.Color.TextDark" Alignment="CenterLeft" />
 
             <Rectangle Layer="Background">

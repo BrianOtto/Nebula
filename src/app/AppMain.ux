@@ -1,53 +1,53 @@
 <App>
-	<ux:Include File="AppGlobals.ux" />
-	<ux:Include File="AppButtons.ux" />
+    <ux:Include File="AppGlobals.ux" />
+    <ux:Include File="AppButtons.ux" />
 
-	<JavaScript>
-		var client = require('../lib/nebula/Client.js');
+    <JavaScript>
+        var client = require('../lib/nebula/Client.js');
 
-		// An invite code for a pub server. You can get a new one from http://ssb.exitsystemcall.com/invited
-		var invite = 'ssb.exitsystemcall.com:8008:@gSb2Dt4qtUSIt0jV1yrugKPiBriKPIUFfYB574vWhrM=.ed25519~H7CnTrQ2thtMwxUWsfWb1OL/qQ4gfNiI09pJbOAx9+4=';
+        // An invite code for a pub server. You can get a new one from http://ssb.exitsystemcall.com/invited
+        var invite = 'ssb.exitsystemcall.com:8008:@gSb2Dt4qtUSIt0jV1yrugKPiBriKPIUFfYB574vWhrM=.ed25519~H7CnTrQ2thtMwxUWsfWb1OL/qQ4gfNiI09pJbOAx9+4=';
 
-		client.connect(invite);
+        client.connect(invite);
 
-		module.exports = {
-	    	clickMyFeed: function() {
-	        	router.goto('myfeed');
-	        },
+        module.exports = {
+            clickMyFeed: function() {
+                router.goto('myfeed');
+            },
 
-	        clickChannels: function() {
-	        	router.goto('channels');
-	        },
+            clickChannels: function() {
+                router.goto('channels');
+            },
 
-	        clickContacts: function() {
-	        	router.goto('contacts');
-	        },
+            clickContacts: function() {
+                router.goto('contacts');
+            },
 
-	        clickSettings: function() {
-	        	router.goto('settings');	        	
-	        },
-	    };
-	</JavaScript>
+            clickSettings: function() {
+                router.goto('settings');                
+            },
+        };
+    </JavaScript>
 
-	<Router ux:Name="router" />
+    <Router ux:Name="router" />
 
-	<DockPanel>
-	    <Navigator DefaultPath="myfeed">
-	        <PageMyFeed ux:Template="myfeed" router="router" />
-	        <PageChannels ux:Template="channels" router="router" />
-	        <PageContacts ux:Template="contacts" router="router" />
-	        <PageSettings ux:Template="settings" router="router" />
-	    </Navigator>
+    <DockPanel>
+        <Navigator DefaultPath="myfeed">
+            <PageMyFeed ux:Template="myfeed" router="router" />
+            <PageChannels ux:Template="channels" router="router" />
+            <PageContacts ux:Template="contacts" router="router" />
+            <PageSettings ux:Template="settings" router="router" />
+        </Navigator>
 
-	    <WidgetSearch Dock="Top" />
+        <WidgetSearch Dock="Top" />
 
-	    <Grid Dock="Bottom" Columns="1*,1*,1*,1*">
-	    	<UserEvent ux:Name="resetLineColor" />
+        <Grid Dock="Bottom" Columns="1*,1*,1*,1*">
+            <UserEvent ux:Name="resetLineColor" />
 
-	        <ButtonNavbar Icon="&#xF0EC;" Text="My Feed" Clicked="{clickMyFeed}" LineColor="Nebula.Color.TextLight" />
-	        <ButtonNavbar Icon="&#xF086;" Text="Channels" Clicked="{clickChannels}" />
-	        <ButtonNavbar Icon="&#xF2BB;" Text="Contacts" Clicked="{clickContacts}" />
-	        <ButtonNavbar Icon="&#xF013;" Text="Settings" Clicked="{clickSettings}" />
-	    </Grid>
-	</DockPanel>
+            <ButtonNavbar Icon="&#xF0EC;" Text="My Feed" Clicked="{clickMyFeed}" LineColor="Nebula.Color.TextLight" />
+            <ButtonNavbar Icon="&#xF086;" Text="Channels" Clicked="{clickChannels}" />
+            <ButtonNavbar Icon="&#xF2BB;" Text="Contacts" Clicked="{clickContacts}" />
+            <ButtonNavbar Icon="&#xF013;" Text="Settings" Clicked="{clickSettings}" />
+        </Grid>
+    </DockPanel>
 </App>

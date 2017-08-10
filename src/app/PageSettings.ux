@@ -70,5 +70,5 @@
                 </StackPanel>
             </StackPanel>
         </ScrollView>
-	</DockPanel>
+    </DockPanel>
 </Page>

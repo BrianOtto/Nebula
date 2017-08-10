@@ -1,29 +1,29 @@
 <Panel>
-	<Font ux:Global="Nebula.Font.FontAwesome" File="../lib/nebula/fonts/FontAwesome.ttf" />
-	<Font ux:Global="Nebula.Font.Regular" File="../lib/nebula/fonts/OpenSans-Regular.ttf" />
-	<Font ux:Global="Nebula.Font.Bold" File="../lib/nebula/fonts/OpenSans-Bold.ttf" />
-	<Font ux:Global="Nebula.Font.Title" File="../lib/nebula/fonts/Raleway-Bold.ttf" />
+    <Font ux:Global="Nebula.Font.FontAwesome" File="../lib/nebula/fonts/FontAwesome.ttf" />
+    <Font ux:Global="Nebula.Font.Regular" File="../lib/nebula/fonts/OpenSans-Regular.ttf" />
+    <Font ux:Global="Nebula.Font.Bold" File="../lib/nebula/fonts/OpenSans-Bold.ttf" />
+    <Font ux:Global="Nebula.Font.Title" File="../lib/nebula/fonts/Raleway-Bold.ttf" />
 
-	<Text ux:Class="NormalText" Font="Nebula.Font.Regular" FontSize="11" />
-	<Text ux:Class="NormalTextBold" Font="Nebula.Font.Bold" FontSize="11" />
-	<Text ux:Class="NormalTextIcon" Font="Nebula.Font.FontAwesome" FontSize="10" />
-	<TextView ux:Class="NormalTextView" Font="Nebula.Font.Regular" FontSize="11" />
-	<TextInput ux:Class="NormalTextInput" Font="Nebula.Font.Regular" Padding="10,5,10,5" />
-	<Text ux:Class="HeaderText" Font="Nebula.Font.Regular" FontSize="15" />
-	<Text ux:Class="HeaderTextIcon" Font="Nebula.Font.FontAwesome" FontSize="19" />
-	<Text ux:Class="HeaderTextIconSmall" Font="Nebula.Font.FontAwesome" FontSize="17" />
-	<Text ux:Class="HeaderTextIconLarge" Font="Nebula.Font.FontAwesome" FontSize="21" />
+    <Text ux:Class="NormalText" Font="Nebula.Font.Regular" FontSize="11" />
+    <Text ux:Class="NormalTextBold" Font="Nebula.Font.Bold" FontSize="11" />
+    <Text ux:Class="NormalTextIcon" Font="Nebula.Font.FontAwesome" FontSize="10" />
+    <TextView ux:Class="NormalTextView" Font="Nebula.Font.Regular" FontSize="11" />
+    <TextInput ux:Class="NormalTextInput" Font="Nebula.Font.Regular" Padding="10,5,10,5" />
+    <Text ux:Class="HeaderText" Font="Nebula.Font.Regular" FontSize="15" />
+    <Text ux:Class="HeaderTextIcon" Font="Nebula.Font.FontAwesome" FontSize="19" />
+    <Text ux:Class="HeaderTextIconSmall" Font="Nebula.Font.FontAwesome" FontSize="17" />
+    <Text ux:Class="HeaderTextIconLarge" Font="Nebula.Font.FontAwesome" FontSize="21" />
 
-	<SolidColor ux:Global="Nebula.Brush.BackDark" Color="#444444" />
-	<SolidColor ux:Global="Nebula.Brush.BackLight" Color="#D5D4D4" />
+    <SolidColor ux:Global="Nebula.Brush.BackDark" Color="#444444" />
+    <SolidColor ux:Global="Nebula.Brush.BackLight" Color="#D5D4D4" />
 
-	<float4 ux:Global="Nebula.Color.TextDark" ux:Value="#000000" />
-	<float4 ux:Global="Nebula.Color.TextLight" ux:Value="#FFFFFF" />
-	<float4 ux:Global="Nebula.Color.TextHighlight" ux:Value="#B65B43" />
-	<float4 ux:Global="Nebula.Color.BackDark" ux:Value="#000000" />
-	<float4 ux:Global="Nebula.Color.BackLight" ux:Value="#FFFFFF" />
-	
-	<float4 ux:Global="Nebula.Color.Filter1" ux:Value="#E09079" />
-	<float4 ux:Global="Nebula.Color.Filter2" ux:Value="#50788E" />
-	<float4 ux:Global="Nebula.Color.Filter3" ux:Value="#559E77" />
+    <float4 ux:Global="Nebula.Color.TextDark" ux:Value="#000000" />
+    <float4 ux:Global="Nebula.Color.TextLight" ux:Value="#FFFFFF" />
+    <float4 ux:Global="Nebula.Color.TextHighlight" ux:Value="#B65B43" />
+    <float4 ux:Global="Nebula.Color.BackDark" ux:Value="#000000" />
+    <float4 ux:Global="Nebula.Color.BackLight" ux:Value="#FFFFFF" />
+    
+    <float4 ux:Global="Nebula.Color.Filter1" ux:Value="#E09079" />
+    <float4 ux:Global="Nebula.Color.Filter2" ux:Value="#50788E" />
+    <float4 ux:Global="Nebula.Color.Filter3" ux:Value="#559E77" />
 </Panel>
